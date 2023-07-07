@@ -1,0 +1,415 @@
+/*
+--- 01 COLORS
+
+BRAND
+Primary  #EE4387
+Secondary #2B223F #313C42
+
+
+GRAYSCALE
+#F9F9F9
+#BCBCBC
+#747474
+#333
+
+
+
+--- 02 WHITESPACE
+
+- Spacing system (rem)
+2 / 2.5 / 3 / 4 / 5 / 10
+1rem = 10px
+gap: 5rem
+margin: 4rem;
+padding: 2rem / 2.5 rem
+
+--- 03 FONT-WEIGHT
+
+300 / 400 / 500 / 700
+
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Does not work on safari */
+  /* scroll-behavior: smooth; */
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+/*********************************/
+/* GENERAL REUSABLE COMPONENTS */
+/*********************************/
+
+.container {
+  max-width: 130rem;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+/*********************************/
+/* HEADER */
+/*********************************/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 5rem; */
+}
+
+.logo {
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+/*********************************/
+/* LEISTUNGEN */
+/*********************************/
+
+.section-leistungen {
+  padding: 15rem;
+}
+
+.leistungen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titel {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #2b223f;
+  margin-bottom: 4rem;
+}
+
+.leistung-beschreibung {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5rem;
+  line-height: 2.5rem;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
+  padding: 5rem 5rem 8rem 5rem;
+  position: relative;
+  transition: transform 0.3s ease;
+  min-width: 30rem;
+}
+
+.column:hover {
+  /* box-shadow: 0 0px 50px 40px rgba(3, 3, 3, 0.08); */
+  box-shadow: 0 80px 60px 5px rgba(31, 39, 45, 0.15);
+  /* transform: scale(101%); */
+}
+
+.column a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 75%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+  transform-origin: left center;
+}
+
+.column.dark-line a::after {
+  background-color: #333;
+}
+
+.column:hover a::after {
+  transform: scaleX(1);
+}
+
+.beschreibung-titel {
+  font-size: 4rem;
+}
+
+.beschreibung-untertitel {
+  line-height: 3rem;
+}
+
+.beschreibung-text {
+  font-weight: 400;
+}
+
+.beschreibung-think {
+  background-color: #ee4387;
+}
+
+.beschreibung-build {
+  background-color: #2b223f;
+}
+
+.beschreibung-grow {
+  color: #2b223f;
+  background-color: #fff;
+  border: 2px solid #bcbcbc;
+}
+
+.mehr-erfahren a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 5rem;
+}
+.mehr-erfahren .btn--grow {
+  color: #2b223f;
+}
+
+.btn--grow .icon {
+  fill: #2b223f;
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: margin-right 4s ease-in-out 1s;
+}
+
+.icon {
+  fill: #fff;
+  width: 3rem;
+  height: 3rem;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.btn--grow {
+  color: #313c42;
+}
+
+.btn--grow::before {
+  background-color: #2b223f;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn svg {
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.column:hover .btn svg {
+  transform: translateX(5px);
+}
+
+/*********************************/
+/* KONTAKT */
+/*********************************/
+
+.section-contact {
+  background-color: #f9f9f9;
+  padding: 10rem 15rem;
+}
+
+.telephone-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15rem;
+}
+
+.telephone-img {
+  margin-top: 10rem;
+  position: relative;
+}
+
+.image-contact {
+  width: 100%;
+}
+
+.image-dot {
+  position: absolute;
+  top: -7.2rem;
+  left: -6.8rem;
+}
+.cta-titel {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #2b223f;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.cta-titel {
+  padding: 3rem 0 0.5rem 0;
+  font-size: 3rem;
+}
+
+.cta-form label {
+  /* display: inline-block; */
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cta-form input[type="text"],
+.cta-form input[type="email"],
+.cta-form select,
+.cta-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.cta-form input::placeholder,
+.cta-form textarea::placeholder,
+.cta-form select {
+  color: #bcbcbc;
+}
+
+.cta-form input:hover,
+.cta-form select:hover,
+.cta-form textarea:hover {
+  border-color: #333;
+}
+
+/* Hides the default arrow on select element */
+#land {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../assets/icons/icon-select.png") no-repeat scroll right
+    center;
+  background-size: contain;
+  padding-right: 15px;
+  color: #bcbcbc;
+}
+
+#nachricht {
+  height: 10rem;
+}
+
+/* .option::before {
+  content: "optional";
+  color: #bcbcbc;
+  margin-left: 90%;
+  margin-bottom: -70%;
+} */
+.datenschutz {
+  /* margin: 3rem 0; */
+  padding: 0 1rem 0.5rem 1rem;
+  line-height: 3rem;
+  background-color: #bcbcbc;
+}
+
+/* .label-row {
+  margin-top: -3rem;
+} */
+
+#datenschutz,
+label {
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+.checkbox-label {
+  font-weight: 300;
+  margin-left: 0.5rem;
+}
+
+.cta *:focus {
+  outline: none;
+  border: 1px solid #333;
+}
+
+.btn-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ee4387;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  border: none;
+  padding: 1rem 3rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.btn-form:link,
+.btn--form:visited {
+  transition: all 0.3s;
+}
+
+.btn-form:active {
+  transform: scale(96%);
+}
+
+.icon-mail {
+  width: 10px;
+  height: 10px;
+}
+
+.optional {
+  float: right;
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/*********************************/
+/* FOOTER */
+/*********************************/
+
+.theend {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+  padding: 10rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #ee4387;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #333;
+}

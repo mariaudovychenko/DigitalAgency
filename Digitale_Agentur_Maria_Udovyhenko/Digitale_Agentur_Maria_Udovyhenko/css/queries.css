@@ -1,0 +1,153 @@
+/********************************/
+/* BELOW 544px (for phones) */
+/*********************************/
+/* 550/16= 34em; 34em * 16 = 544 */
+
+@media (max-width: 34em) {
+  .header {
+    position: center;
+  }
+
+  .logo {
+    height: 15rem;
+  }
+
+  .container {
+    width: 100vw;
+  }
+
+  .section-leistungen {
+    padding: 0 0 5rem 0;
+  }
+
+  .leistungen {
+    justify-content: left;
+    margin-left: 1.5rem;
+  }
+
+  .leistung-beschreibung {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
+  }
+
+  .column {
+    padding: 3rem;
+    font-size: 1.4rem;
+    gap: 4rem;
+    font-weight: 600;
+  }
+  .titel {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .beschreibung-titel {
+    /* line-height: 3rem; */
+    font-size: 2.5rem;
+  }
+
+  .beschreibung-text {
+    font-weight: 300;
+  }
+
+  .beschreibung-think {
+    margin-left: 1.5rem;
+  }
+
+  .beschreibung-grow {
+    margin-right: 1.5rem;
+  }
+  .mehr-erfahren a {
+    gap: 0.5rem;
+    bottom: 2.5rem;
+  }
+
+  /*********************************/
+  /* KONTAKT */
+  /*********************************/
+
+  .section-contact {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 3rem 0;
+    overflow-x: hidden;
+  }
+
+  .telephone-contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    padding: 1.5rem;
+  }
+
+  .image-contact {
+    width: 100%;
+    padding: 0;
+  }
+
+  .telephone-contact {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .telephone-img {
+    order: 2;
+  }
+  .image-dot {
+    transform: scale(0.6);
+    margin-left: 20rem;
+  }
+
+  .cta {
+    order: 1;
+  }
+
+  .datenschutz {
+    line-height: 2.5rem;
+  }
+
+  .checkbox-row {
+    display: grid;
+
+    grid-template-columns: min-content 1fr;
+
+    grid-gap: 0.5rem;
+  }
+  .cta-form .checkbox-label {
+    margin-top: 0;
+  }
+
+  input[type="checkbox"],
+  .checkbox-label {
+    grid-row: 1;
+
+    margin-top: -2.5rem;
+  }
+
+  .cta-form input[type="text"],
+  .cta-form input[type="email"],
+  .cta-form select,
+  .cta-form textarea {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  .btn-form .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .btn-form {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    gap: 1rem;
+  }
+  /*********************************/
+  /* FOOTER */
+  /*********************************/
+  .theend {
+    padding: 5rem 5rem 10rem 5rem;
+  }
+}
